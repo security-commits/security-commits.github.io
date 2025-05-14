@@ -31,7 +31,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="text-primary font-bold text-xl">
-              <span className="text-yellow-500">SEC</span>URITY <span className="text-yellow-500">CdOM</span>MITS
+              SECURITY COMMITS
             </Link>
           </div>
           
@@ -50,15 +50,15 @@ const Header = () => {
             
             <Link to="/convention" className="text-foreground hover:text-primary transition-colors">Convention</Link>
             
-            {isHomePage ? (
+            {/* {isHomePage ? (
               <a href="#examples" className="text-foreground hover:text-primary transition-colors">Examples</a>
             ) : (
               <Link to="/" className="text-foreground hover:text-primary transition-colors">Examples</Link>
-            )}
+            )} */}
             
             {/* <Link to="/reference" className="text-foreground hover:text-primary transition-colors">Reference</Link> */}
             
-            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">Blog</Link>
+            {/* <Link to="/blog" className="text-foreground hover:text-primary transition-colors">Blog</Link> */}
             
             <Link to="/docs" className="text-foreground hover:text-primary transition-colors">Docs</Link>
             

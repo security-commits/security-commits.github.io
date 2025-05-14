@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import { FiArrowDown, FiGithub } from 'react-icons/fi';
 
@@ -10,7 +9,8 @@ const Hero = () => {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
-                <span className="text-primary">SECOM</span>: Security Commit Message Convention
+                <span className="text-primary">SECOM</span><br />
+                <span className="text-4xl">Security Commit Message Convention</span>
               </h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 <strong>A standardized way to document security changes in your commit messages</strong>
@@ -21,11 +21,10 @@ const Hero = () => {
                 <Button size="lg" className="flex items-center gap-2" asChild>
                   <a href="/convention">
                     Get Started
-                    <FiArrowDown className="ml-1" size={16} />
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="flex items-center gap-2" asChild>
-                  <a href="https://github.com/security-commits/secom" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/security-commits/" target="_blank" rel="noopener noreferrer">
                     <FiGithub size={16} />
                     View on GitHub
                   </a>

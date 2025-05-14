@@ -1,73 +1,51 @@
-# Welcome to your Lovable project
+# security-commits.org
 
-## Project info
+[![Security Commits](https://img.shields.io/badge/Security%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://security-commits.org)
 
-**URL**: https://lovable.dev/projects/6afe7763-2aeb-46a8-9748-35b98b5fb3e3
+This repo is the home of the [SECOM specification](https://security-commits.org).
 
-## How can I edit this code?
+## Repo Layout
 
-There are several ways of editing your application.
+We use [HUGO](https://gohugo.io/) as static site generator, so we use the [directory structure](https://gohugo.io/getting-started/directory-structure/) HUGO proposes.
 
-**Use Lovable**
+#### Our implementation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6afe7763-2aeb-46a8-9748-35b98b5fb3e3) and start prompting.
+* `./content`: contains all the versions of the specification.
+* `./content/next/`: contains the version of the specification (where all the changes SHOULD be made).
+* `./content/**/index.[lang].md`: contains the content of the specification, if a language is specified it's a translation.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Contributing
 
-**Use your preferred IDE**
+We'd love your help refining the language of this specification,
+fixing typos, or adding more translations. Please don't hesitate
+to send a pull request.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Adding a translation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Create a new file in `./content/version/index.[lang].md` using the hugo command `hugo new [version]/index.[lang].md`.
+1. Ensure all files have the appropriate fields required (see others as an example)..
+1. Add the language to the `config.yaml` file (see others as an example).
 
-Follow these steps:
+### Running project locally
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+There's a docker-compose.yml file ready that will help you to check if the website looks good!
+To run it make sure you have [docker-compose installed](https://docs.docker.com/compose/install/#install-compose) on your machine and just use the command `docker-compose up` to make it run locally.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Once the website will be compiled, you can see the website visiting `http://localhost:1313`
 
-# Step 3: Install the necessary dependencies.
-npm i
+## Badges!
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+Tell your users that you use the Conventional Commits specification:
+
+```markdown
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
 ```
 
-**Edit a file directly in GitHub**
+## Thank you
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To **[Lorenzo D'Ianni](https://github.com/lorenzodianni)** for the great effort creating the CSS and the HTML for the new UI.
 
-**Use GitHub Codespaces**
+To **[Netlify](https://www.netlify.com/)** to host our project, giving us a lot of [amazing built in functionality](https://www.netlify.com/features/) for free.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6afe7763-2aeb-46a8-9748-35b98b5fb3e3) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+To **[semver.org](https://github.com/mojombo/semver.org)**: we used [semver.org](https://github.com/mojombo/semver.org) as a blueprint for
+the structure of this specification and the first version of the website.
