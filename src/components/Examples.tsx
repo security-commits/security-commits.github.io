@@ -7,98 +7,53 @@ import { coldarkDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const examples = [
   {
-    id: "xss-fix",
-    title: "XSS Vulnerability Fix",
-    code: `fix: prevent XSS in user profile display (VULN-2023-42)
+    id: "",
+    title: "CVE-2012-0036 (before SECOM)",
+    code: `URL sanitize: reject URLs containing bad data
+Protocols (IMAP, POP3 and SMTP) that use the path part of a URL in a
+decoded manner now use the new Curl_urldecode() function to reject URLs
+with embedded control codes (anything that is or decodes to a byte value
+less than 32).
 
-# (what) User-provided profile data is not sanitized, allowing script injection
-# (why) Malicious scripts in profile data could be executed in other users' browsers
-# (how) Added input sanitization and implemented Content Security Policy headers
+URLs containing such codes could easily otherwise be used to do harm and
+allow users to do unintended actions with otherwise innocent tools and
+applications. Like for example using a URL like
+pop3://pop3.example.com/1%0d%0aDELE%201 when the app wants a URL to get
+a mail and instead this would delete one.
 
-Weakness: Cross-Site Scripting (CWE-79)
-Severity: High
-CVSS: 7.5
-Detection: Code Review
-Report: https://example.com/security/report/42
-Introduced in: a1b2c3d4
+This flaw is considered a security vulnerability: CVE-2012-0036
 
-Reported-by: Alice Security <alice@security.example>
-Reviewed-by: Bob Developer <bob@dev.example>
+Security advisory at: http://curl.haxx.se/docs/adv_20120124.html
 
-Resolves: #157
-See also: #142, #158`,
-    explanation: "This commit message clearly identifies an XSS vulnerability, its impact, and remediation steps. It includes severity information and proper attribution."
+Reported by: Dan Fandrich`,
+    explanation: "This commit message shows the documentation uses Curl_urldecode() to reject control‐code–embedded URLs in IMAP/POP3/SMTP, preventing command injection (CVE-2012-0036), links the advisory, and credits the reporter."
   },
   {
     id: "auth-improvement",
-    title: "Authentication Brute Force Protection",
-    code: `feat: implement rate limiting for login attempts (SEC-2023-07)
+    title: "CVE-2012-0036 (after SECOM)",
+    code: `vuln-fix: Sanitize URLs to reject malicious data (CVE-2012-0036)
 
-# (what) Login endpoint allows unlimited authentication attempts
-# (why) Enables brute force attacks against user passwords
-# (how) Added IP-based rate limiting (5 attempts) with temporary lockout
+Protocols (IMAP, POP3 and SMTP) that use the path part of a URL in a
+decoded manner now use the new Curl_urldecode() function to reject URLs
+with embedded control codes (anything that is or decodes to a byte value
+less than 32).
+URLs containing such codes could easily otherwise be used to do harm and
+allow users to do unintended actions with otherwise innocent tools and
+applications.
+Like for example using a URL like pop3://pop3.example.com/1%0d%0aDELE%201 
+when the app wants a URL to get a mail and instead this would delete one.
 
-Weakness: Improper Authentication (CWE-307)
-Severity: Medium
-CVSS: 5.3
-Detection: Penetration Testing
-Report: https://security.example.com/findings/304
-Introduced in: e5f6a7b8
+Weakness: CWE-89
+Severity: High
+Detection: Manual
+Report: https://curl.se/docs/CVE-2012-0036.html
 
-Reported-by: Charlie Security <charlie@pentester.example>
-Reviewed-by: Diana Admin <diana@admin.example>
-Co-authored-by: Evan Engineer <evan@dev.example>
+Reported-by: Dan Fandrich
+Signed-off-by: Daniel Stenberg (daniel@haxx.se)
 
-Bug-tracker: https://issues.example.com/SEC-2023-07
-See also: #283`,
+Resolves: #17940
+See also: #17937`,
     explanation: "This example shows how to document a new security feature that addresses a brute force vulnerability. It clearly describes the problem, impact, and solution."
-  },
-  {
-    id: "dependency-update",
-    title: "Log4Shell Vulnerability Fix",
-    code: `fix: update log4j to mitigate RCE vulnerability (CVE-2021-44228)
-
-# (what) Log4j 2.14.0 has a remote code execution vulnerability
-# (why) Attackers can execute arbitrary code via JNDI lookups
-# (how) Upgraded log4j from 2.14.0 to 2.15.0 and verified functionality
-
-Weakness: Deserialization of Untrusted Data (CWE-502)
-Severity: Critical
-CVSS: 10.0
-Detection: Vendor Advisory
-Report: https://logging.apache.org/log4j/2.x/security.html
-Introduced in: 3c4d5e6f
-
-Reported-by: Apache Log4j Team
-Reviewed-by: Frank Security <frank@security.example>
-Signed-off-by: Grace DevOps <grace@devops.example>
-
-Resolves: #501`,
-    explanation: "This commit shows how to document a security-related dependency update. It specifies the vulnerability being addressed (CVE-2021-44228), the CVSS score, and includes a link to the official security advisory."
-  },
-  {
-    id: "security-hardening",
-    title: "CSRF Protection Implementation",
-    code: `refactor: implement CSRF protection for POST endpoints (SEC-2023-09)
-
-# (what) API lacks Cross-Site Request Forgery protection
-# (why) Attackers could forge authenticated requests from users
-# (how) Added CSRF token validation middleware for all state-changing operations
-
-Weakness: Cross-Site Request Forgery (CWE-352)
-Severity: Medium
-CVSS: 6.5
-Detection: Security Audit
-Report: https://audit.example.com/report/2023-q2
-Introduced in: 1a2b3c4d
-
-Reported-by: Security Team <security@example.com>
-Reviewed-by: Harry Engineer <harry@dev.example>
-Co-authored-by: Ivy Developer <ivy@dev.example>
-
-Bug-tracker: https://issues.example.com/SEC-2023-09
-Resolves: #412`,
-    explanation: "This example demonstrates how to document security hardening changes that don't fix a specific vulnerability but improve overall security posture. It follows the what/why/how structure and provides complete metadata."
   }
 ];
 

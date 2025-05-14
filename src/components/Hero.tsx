@@ -15,17 +15,17 @@ const Hero = () => {
               <p className="mt-6 text-lg leading-8 text-muted-foreground">
                 <strong>A standardized way to document security changes in your commit messages</strong>
                 <br></br>
-                Improve security tracking, facilitate audits, and enhance collaboration.
+                Improve security tracking, facilitate audits, and enhance collaboration
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Button size="lg" className="flex items-center gap-2" asChild>
-                  <a href="#convention">
+                  <a href="/convention">
                     Get Started
                     <FiArrowDown className="ml-1" size={16} />
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" className="flex items-center gap-2" asChild>
-                  <a href="https://github.com/TQRG/secom" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/security-commits/secom" target="_blank" rel="noopener noreferrer">
                     <FiGithub size={16} />
                     View on GitHub
                   </a>
@@ -44,21 +44,31 @@ const Hero = () => {
                 <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
               </div>
-              <div className="ml-4 text-gray-200 text-sm">Example Commit Message</div>
+              <div className="ml-4 text-gray-200 text-sm">Security Commit Message Example</div>
             </div>
             <pre className="p-4 text-sm text-gray-300 overflow-x-auto bg-gray-900">
               <code>
-{`fix(auth): [CWE-798] update hard-coded admin credentials
+{`vuln-fix: Sanitize URLs to reject malicious data (CVE-2012-0036)
 
-- Replace hard-coded admin credentials with environment variables
-- Add documentation for setting up proper authentication
+Protocols (IMAP, POP3 and SMTP) that use the path part of a URL 
+in a decoded manner now use the new Curl_urldecode() function to 
+reject URLs with embedded control codes (anything that is or decodes 
+to a byte value less than 32). URLs containing such codes could easily 
+otherwise be used to do harm and allow users to do unintended actions 
+with otherwise innocent tools and applications. Like for example using 
+a URL like pop3://pop3.example.com/1%0d%0aDELE%201 when the app wants 
+// a URL to get a mail and instead this would delete one.
 
-Security: Eliminates hard-coded credentials that could lead to 
-unauthorized access if discovered in source code.
+Weakness: CWE-89
+Severity: High
+Detection: Manual
+Report: https://curl.se/docs/CVE-2012-0036.html
 
-Fixes: CVE-2023-XXXXX
-Scope: runtime
-Issue: #123`}
+Reported-by: Dan Fandrich
+Signed-off-by: Daniel Stenberg (daniel@haxx.se)
+
+Resolves: #17940
+See also: #17937`}
               </code>
             </pre>
           </div>

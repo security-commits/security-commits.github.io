@@ -30,7 +30,6 @@ const App = () => (
           <Route path="/docs/convention" element={<DocsConvention />} />
           <Route path="/docs/reference" element={<DocsReference />} />
           <Route path="/docs/installation" element={<DocsInstallation />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

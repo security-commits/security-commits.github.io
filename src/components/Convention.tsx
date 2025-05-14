@@ -7,10 +7,10 @@ const Convention = () => {
     <section id="convention" className="py-16">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto mb-12 text-center">
-          <h2 className="text-3xl font-bold mb-6">The SECOM Convention</h2>
+          <h2 className="text-3xl font-bold mb-6">SECOM Convention</h2>
           <p className="text-lg text-muted-foreground">
             SECOM follows a structured format to clearly communicate security-related changes. 
-            Here's how to create effective security commit messages.
+            <br />Here's how to create effective security commit messages.
           </p>
         </div>
 
@@ -25,50 +25,55 @@ const Convention = () => {
             <TabsContent value="structure" className="mt-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>SeCom Message Structure</CardTitle>
+                  <CardTitle>SECOM Message Structure</CardTitle>
                   <CardDescription>
-                    The basic format for a security commit message using SeCom
+                    The basic format for a security commit message
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <pre className="bg-secondary rounded-md p-4 overflow-x-auto">
-                    <code>{`<type>: <header/subject> (<Vuln-ID>)
+                    <code>{`vuln-fix: <header/subject> (<Vuln-ID>)
 
 <body>
-# (what) describe the vulnerability/problem
-# (why) describe its impact
-# (how) describe the patch/fix
+# What:    Describe the vulnerability.
+# Why:     Explain its impact or risk.
+# How:     Describe how it was fixed.
+</body>
 
-Weakness: <Weakness Name or CWE-ID>
-Severity: <Low, Medium, High or Critical>
-CVSS: <Numerical representation (0-10) of severity>
-Detection: <Detection Method>
-Report: <Report Link>
-Introduced in: <Commit Hash>
+[For each identified weakness:]
+Weakness:   <Weakness Name or CWE-ID>
+Severity:   <Low | Medium | High | Critical>
+CVSS:       <CVSS Score (0-10)>
+Detection:  <Detection Method>
+Report:     <Link to Advisory or Report>
+Introduced-in: <Commit Hash of Introduced Vuln>
+[End Weakness Block]
 
-Reported-by: <Name> (<Contact>)
-Reviewed-by: <Name> (<Contact>)
+Reported-by:    <Name> (<Contact>)
+Reviewed-by:    <Name> (<Contact>)
 Co-authored-by: <Name> (<Contact>)
-Signed-off-by: <Name> (<Contact>)
+Signed-off-by:  <Name> (<Contact>)
 
-Bug-tracker: <Bug-tracker Link>
-OR
-Resolves: <Issue/PR No.>
-See also: <Issue/PR No.>`}</code>
+Bug-tracker: <Bug Tracker URL>
+Resolves:    <Issue or PR Number>
+See also:    <Related Issue or PR Number>`}</code>
                   </pre>
                   
                   <div className="prose prose-sm max-w-none">
                     <p>This structured format ensures that security information is consistently presented and easily parsed by both humans and tools.</p>
                     
                     <h4>Header</h4>
-                    <p>The first line includes the change type, a descriptive header/subject, and an optional vulnerability identifier.</p>
+                    <p>The first line includes the change type (vuln-fix), a descriptive header/subject, and an optional vulnerability identifier.</p>
                     
                     <h4>Body</h4>
                     <p>Describes what the vulnerability/problem is, why it matters (impact), and how it was fixed.</p>
                     
                     <h4>Metadata</h4>
-                    <p>Structured information including weakness details, severity ratings, detection methods, and attribution.</p>
+                    <p>Structured information including weakness details, severity ratings, CVSS score, detection methods, links to advisory or reports, and commit hash for the commit that introduced the vulnerability.</p>
                     
+                    <h4>Contacts</h4>
+                    <p>Credits reporters, reviewers, and contributors in the commit message using the appropriate fields.</p>
+
                     <h4>References</h4>
                     <p>Links to bug trackers, related issues, or additional resources.</p>
                   </div>
@@ -79,17 +84,12 @@ See also: <Issue/PR No.>`}</code>
             <TabsContent value="components" className="mt-6 space-y-6">
               <Card>
                 <CardHeader>
-                  <CardTitle>Types</CardTitle>
-                  <CardDescription>Common commit types for security changes</CardDescription>
+                  <CardTitle>Type</CardTitle>
+                  <CardDescription>Common commit type for security changes</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li><strong>fix:</strong> Security vulnerability fixes</li>
-                    <li><strong>feat:</strong> New security features</li>
-                    <li><strong>chore:</strong> Regular security maintenance tasks</li>
-                    <li><strong>test:</strong> Adding or improving security tests</li>
-                    <li><strong>docs:</strong> Security documentation updates</li>
-                    <li><strong>refactor:</strong> Code changes that improve security without changing functionality</li>
+                    <li><strong>vuln-fix:</strong> Security vulnerability fixes</li>
                   </ul>
                 </CardContent>
               </Card>

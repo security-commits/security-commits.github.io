@@ -7,9 +7,9 @@ const BlogPreview = () => {
     <section className="py-16 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center mb-12 text-center">
-          <h2 className="text-3xl font-bold text-primary mb-4">From Our Blog</h2>
+          <h2 className="text-3xl font-bold text-primary mb-4">Blog</h2>
           <p className="text-muted-foreground max-w-2xl">
-            Discover best practices, tips, and in-depth guides about security commit messages and more.
+            Discover best practices, tips, and new updates about security commits.
           </p>
         </div>
         
@@ -37,7 +37,7 @@ const BlogPreview = () => {
             </p>
             
             <Button variant="default" className="group">
-              <Link to="/blog" className="flex items-center gap-2">
+              <Link to="/blog" className="flex items-center gap-2 text-white hover:text-white">
                 Read Full Article
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </Link>
