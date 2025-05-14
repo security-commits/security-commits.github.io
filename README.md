@@ -42,10 +42,3 @@ Tell your users that you use the Conventional Commits specification:
 ```
 
 ## Thank you
-
-To **[Lorenzo D'Ianni](https://github.com/lorenzodianni)** for the great effort creating the CSS and the HTML for the new UI.
-
-To **[Netlify](https://www.netlify.com/)** to host our project, giving us a lot of [amazing built in functionality](https://www.netlify.com/features/) for free.
-
-To **[semver.org](https://github.com/mojombo/semver.org)**: we used [semver.org](https://github.com/mojombo/semver.org) as a blueprint for
-the structure of this specification and the first version of the website.
