@@ -27,21 +27,21 @@ const docSections: DocSection[] = [
     title: "Getting Started",
     links: [
       { title: "Introduction", href: "/docs" },
-      { title: "Configuration", href: "/docs/configuration" }
+      // { title: "Configuration", href: "/docs/configuration" }
     ]
   },
-  {
-    title: "Convention",
-    links: [
-      { title: "Convention Overview", href: "/docs/convention" }
-    ]
-  },
-  {
-    title: "Reference",
-    links: [
-      { title: "Reference Guide", href: "/docs/reference" }
-    ]
-  },
+  // {
+  //   title: "Convention",
+  //   links: [
+  //     { title: "Convention Overview", href: "/docs/convention" }
+  //   ]
+  // },
+  // {
+  //   title: "Reference",
+  //   links: [
+  //     { title: "Reference Guide", href: "/docs/reference" }
+  //   ]
+  // },
   {
     title: "Tools",
     links: [
