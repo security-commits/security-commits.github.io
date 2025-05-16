@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { FiArrowDown, FiGithub } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -19,9 +20,9 @@ const Hero = () => {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Button size="lg" className="flex items-center gap-2" asChild>
-                  <a href="/convention">
+                  <Link to="/convention">
                     Get Started
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="flex items-center gap-2" asChild>
                   <a href="https://github.com/security-commits/" target="_blank" rel="noopener noreferrer">

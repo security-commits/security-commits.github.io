@@ -15,7 +15,7 @@ const DocsReference = () => {
         <div className="prose prose-slate max-w-none">
           <Card className="mb-8">
             <CardHeader>
-              <CardTitle>SeCom Message Template</CardTitle>
+              <CardTitle>SECOM Message Template</CardTitle>
             </CardHeader>
             <CardContent>
               <pre className="bg-secondary rounded-md p-4 overflow-x-auto">
