@@ -3,8 +3,8 @@ import DocsLayout from "@/components/DocsLayout";
 const Docs = () => {
   return (
     <DocsLayout>
-      <div className="space-y-6">
-        <h1 className="text-4xl font-bold text-primary mb-6">SECOM Documentation</h1>
+      <div className="space-y-6 pt-8 md:pt-12">
+        <h1 className="text-4xl font-bold text-primary mb-10 mt-6">SECOM Documentation</h1>
         
         <div className="text-lg text-muted-foreground mb-8">
           Comprehensive documentation for the SECOM convention, a standardized approach to security commit messages.
@@ -47,10 +47,10 @@ const Docs = () => {
           </p>
           
           <ul>
-            <li><a href="/docs/installation" className="text-primary hover:underline">Installation</a> - Set up SECOM in your development environment</li>
+            <li><a href="/docs/configuration" className="text-primary hover:underline">Configuration</a> - Set up SECOM in your development environment</li>
             <li><a href="/docs/convention" className="text-primary hover:underline">Convention Overview</a> - Understand the full convention specification</li>
             <li><a href="/docs/reference" className="text-primary hover:underline">Reference Guide</a> - Explore example patterns and templates</li>
-            <li><a href="https://tqrg.github.io/secomlint/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Linter Tool</a> - Check compliance with the convention</li>
+            <li><a href="https://security-commits.org/secomlint/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">Linter Tool</a> - Check compliance with the convention</li>
           </ul>
           
           <div className="bg-muted p-4 rounded-md mt-8">

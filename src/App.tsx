@@ -10,7 +10,7 @@ import BlogPage from "./pages/Blog";
 import Docs from "./pages/Docs";
 import DocsConvention from "./pages/DocsConvention";
 import DocsReference from "./pages/DocsReference";
-import DocsInstallation from "./pages/DocsInstallation";
+import DocsConfiguration from "./pages/DocsConfiguration";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,7 +29,7 @@ const App = () => (
           <Route path="/docs" element={<Docs />} />
           <Route path="/docs/convention" element={<DocsConvention />} />
           <Route path="/docs/reference" element={<DocsReference />} />
-          <Route path="/docs/installation" element={<DocsInstallation />} />
+          <Route path="/docs/configuration" element={<DocsConfiguration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

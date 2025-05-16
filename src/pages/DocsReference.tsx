@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const DocsReference = () => {
   return (
     <DocsLayout>
-      <div className="space-y-6">
-        <h1 className="text-4xl font-bold text-primary mb-6">Reference Guide</h1>
+      <div className="space-y-6 pt-8 md:pt-12">
+        <h1 className="text-4xl font-bold text-primary mb-10 mt-6">Reference Guide</h1>
         
         <div className="text-lg text-muted-foreground mb-8">
           A comprehensive reference for implementing and using the SECOM convention.

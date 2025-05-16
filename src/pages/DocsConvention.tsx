@@ -3,8 +3,8 @@ import DocsLayout from "@/components/DocsLayout";
 const DocsConvention = () => {
   return (
     <DocsLayout>
-      <div className="space-y-6">
-        <h1 className="text-4xl font-bold text-primary mb-6">SECOM Convention</h1>
+      <div className="space-y-6 pt-8 md:pt-12">
+        <h1 className="text-4xl font-bold text-primary mb-10 mt-6">Convention</h1>
         
         <div className="text-lg text-muted-foreground mb-8">
           The complete specification for the Security Commit Message Convention.

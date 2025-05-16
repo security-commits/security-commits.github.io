@@ -20,7 +20,7 @@ const Hero = () => {
               </p>
               <div className="mt-10 flex items-center justify-center gap-x-6">
                 <Button size="lg" className="flex items-center gap-2" asChild>
-                  <Link to="/convention">
+                  <Link to="/convention" className="text-white hover:text-blue-100">
                     Get Started
                   </Link>
                 </Button>
@@ -50,14 +50,14 @@ const Hero = () => {
               <code>
 {`vuln-fix: Sanitize URLs to reject malicious data (CVE-2012-0036)
 
-Protocols (IMAP, POP3 and SMTP) that use the path part of a URL 
-in a decoded manner now use the new Curl_urldecode() function to 
-reject URLs with embedded control codes (anything that is or decodes 
-to a byte value less than 32). URLs containing such codes could easily 
-otherwise be used to do harm and allow users to do unintended actions 
-with otherwise innocent tools and applications. Like for example using 
-a URL like pop3://pop3.example.com/1%0d%0aDELE%201 when the app wants 
-// a URL to get a mail and instead this would delete one.
+libcurl IMAP/POP3/SMTP parsers accepted URL-path bytes that decode 
+to ASCII control characters, enabling attackers to smuggle extra 
+protocol commands—e.g. pop3://host/1%0D%0ADELE%201—and perform 
+unintended mail operations. Any application that forwards 
+untrusted URLs could thus silently delete or alter messages. 
+The fix routes path decoding through Curl_urldecode(), which 
+aborts when a decoded byte < 0x20 and returns CURLE_URL_MALFORMAT, 
+preventing the crafted request from ever reaching the server.
 
 Weakness: CWE-89
 Severity: High

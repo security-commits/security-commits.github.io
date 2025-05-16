@@ -1,17 +1,17 @@
 import DocsLayout from "@/components/DocsLayout";
 
-const DocsInstallation = () => {
+const DocsConfiguration = () => {
   return (
     <DocsLayout>
-      <div className="space-y-6">
-        <h1 className="text-4xl font-bold text-primary mb-6">Installation</h1>
+      <div className="space-y-6 pt-8 md:pt-12">
+        <h1 className="text-4xl font-bold text-primary mb-10 mt-6">Configuration Guide</h1>
         
         <div className="text-lg text-muted-foreground mb-8">
           Set up SECOM in your development environment.
         </div>
         
         <div className="prose prose-slate max-w-none">
-          <h2>Setting Up SECOM</h2>
+          <h2>Configuring SECOM</h2>
           <p>
             Adopting the SECOM convention in your project is straightforward and doesn't require 
             installing any special software. However, to get the most out of SECOM, we recommend
@@ -98,11 +98,11 @@ const DocsInstallation = () => {
           
           <h2>Next Steps</h2>
           <p>
-            Now that you have SECOM set up, you can:
+            Now that you have SECOM configured, you can:
           </p>
           
           <ul>
-            <li>Read the <a href="/docs/convention" className="text-primary hover:underline">full convention</a> to understand the format</li>
+            <li>Read the <a href="/docs/convention" className="text-primary hover:underline">convention overview</a> to understand the format</li>
             <li>Check out the <a href="/docs/reference" className="text-primary hover:underline">reference guide</a> for examples and templates</li>
           </ul>
         </div>
@@ -111,4 +111,4 @@ const DocsInstallation = () => {
   );
 };
 
-export default DocsInstallation; 
+export default DocsConfiguration; 
