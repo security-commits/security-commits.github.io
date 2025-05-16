@@ -68,9 +68,9 @@ See also:    <Related Issue or PR Number>`;
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="relative">
-                    <pre className="bg-secondary rounded-md p-4 overflow-x-auto">
+                  <pre className="bg-secondary rounded-md p-4 overflow-x-auto">
                       <code>{templateCode}</code>
-                    </pre>
+                  </pre>
                     <Button 
                       variant="ghost"
                       size="sm" 
@@ -135,7 +135,7 @@ See also:    <Related Issue or PR Number>`;
                         <li>Include in parentheses</li>
                         <li>Examples: CVE-2023-1234</li>
                         <li>Examples: GHSA-abcd-1234-efgh</li>
-                      </ul>
+                  </ul>
                     </div>
                   </div>
                 </CardContent>
@@ -162,7 +162,7 @@ See also:    <Related Issue or PR Number>`;
                       <li>
                         <strong className="font-medium">How:</strong> Describe how the issue was fixed. What approach was taken to resolve the vulnerability?
                       </li>
-                    </ul>
+                  </ul>
                   </div>
                 </CardContent>
               </Card>
@@ -190,7 +190,7 @@ See also:    <Related Issue or PR Number>`;
                           <li><strong>Detection:</strong> How issue was found</li>
                           <li><strong>Report:</strong> Link to advisory or report</li>
                           <li><strong>Introduced-in:</strong> Origin commit hash</li>
-                        </ul>
+                  </ul>
                       </div>
                     </div>
                     

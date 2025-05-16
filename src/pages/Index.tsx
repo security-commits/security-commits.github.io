@@ -5,6 +5,7 @@ import NewsSection from "@/components/NewsSection";
 import Examples from "@/components/Examples";
 import BlogPreview from "@/components/BlogPreview";
 import Footer from "@/components/Footer";
+import Recognition from "@/components/Recognition";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Header />
       <Hero />
       <About />
+      <Recognition />
       {/* <Examples /> */}
       {/* <BlogPreview /> */}
       <NewsSection />
