@@ -22,11 +22,11 @@ const newsItems: NewsItem[] = [
     text: <>SECOM has been selected for the <a href="https://conf.researchr.org/track/msr-2022/msr-2022-foss-award?#Recipients" target="_blank">FOSS Award</a> at MSR'22.</>,
     date: "May 2022"
   },
-  {
-    icon: <FiStar size={20} className="text-primary" />,
-    text: <>SECOM got accepted at <a href="https://conf.researchr.org/home/msr-2022" target="_blank">MSR'22</a> - Industry Track. <a href="https://security-commits.org/secom/static/media/msr22_presentation.20fbb416f4df034ae29b.pdf" target="_blank">Slides</a>, <a href="https://www.computer.org/csdl/proceedings-article/msr/2022/930300a764/1Eo5Tyf4nsc" target="_blank">Paper</a></>,
-    date: "May 2022"
-  }
+  // {
+  //   icon: <FiStar size={20} className="text-primary" />,
+  //   text: <>SECOM got accepted at <a href="https://conf.researchr.org/home/msr-2022" target="_blank">MSR'22</a> - Industry Track. <a href="https://security-commits.org/secom/static/media/msr22_presentation.20fbb416f4df034ae29b.pdf" target="_blank">Slides</a>, <a href="https://www.computer.org/csdl/proceedings-article/msr/2022/930300a764/1Eo5Tyf4nsc" target="_blank">Paper</a></>,
+  //   date: "May 2022"
+  // }
 ];
 
 const NewsSection = () => {

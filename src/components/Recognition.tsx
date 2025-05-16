@@ -191,7 +191,7 @@ const Recognition = () => {
                                 code: ({node, ...props}) => <code className="font-mono bg-slate-100 px-1 py-0.5 rounded text-[9px] sm:text-[10px]" {...props} />
                               }}
                             >{`# vuln-fix: Use HTTPS instead of HTTP to resolve deps CVE-2021-26291
-This fixes a security vulnerability in this project where the \`pom.xml\`
+This fixes a security vulnerability in this project where the **pom.xml**
 files were configuring Maven to resolve dependencies over HTTP instead of
 HTTPS.
 

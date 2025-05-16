@@ -45,15 +45,15 @@ const docSections: DocSection[] = [
   {
     title: "Tools",
     links: [
-      { title: "Linter", href: "https://tqrg.github.io/secomlint/", external: true },
-      { title: "Dataset", href: "https://github.com/TQRG/security-patches-dataset", external: true },
+      { title: "Linter", href: "https://security-commits.org/secomlint/", external: true },
+      { title: "Dataset", href: "https://github.com/security-commits/security-patches-dataset", external: true },
     ]
   },
   {
     title: "External Resources",
     links: [
-      { title: "Blog", href: "/blog" },
-      { title: "GitHub Repository", href: "https://github.com/TQRG/secom", external: true }
+      // { title: "Blog", href: "/blog" },
+      { title: "GitHub Organization", href: "https://github.com/security-commits/secom", external: true }
     ]
   }
 ];
@@ -127,16 +127,6 @@ const DocsLayout = ({ children }: DocsLayoutProps) => {
             ${sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}
           `}
         >
-          <div className="p-4 sticky top-0 bg-background/80 backdrop-blur-sm border-b z-10">
-            <div className="relative">
-              <FiSearch className="absolute left-3 top-2.5 text-muted-foreground" />
-              <Input 
-                placeholder="Search documentation..." 
-                className="pl-9"
-              />
-            </div>
-          </div>
-          
           <nav className="p-4">
             {docSections.map((section, i) => (
               <div key={i} className="mb-6">
