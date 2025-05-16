@@ -24,7 +24,7 @@ const DocsConfiguration = () => {
           </p>
           
           <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-            <code>
+            <code className="text-black">
               security(CWE-XXX): Concise summary of the fix{"\n\n"}
               # Detailed description:{"\n"}
               # - What was the vulnerability?{"\n"}
@@ -39,7 +39,7 @@ const DocsConfiguration = () => {
           </p>
           
           <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-            <code>
+            <code className="text-black">
               git config --global commit.template /path/to/secom-template.txt
             </code>
           </pre>
@@ -54,7 +54,7 @@ const DocsConfiguration = () => {
           </p>
           
           <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-            <code>
+            <code className="text-black">
               npm install -g @tqrg/secomlint
             </code>
           </pre>
@@ -70,13 +70,13 @@ const DocsConfiguration = () => {
           </p>
           
           <ol>
-            <li>Create a file named <code>commit-msg</code> in your <code>.git/hooks/</code> directory</li>
-            <li>Make it executable with <code>chmod +x .git/hooks/commit-msg</code></li>
+            <li>Create a file named <code className="text-black">commit-msg</code> in your <code className="text-black">.git/hooks/</code> directory</li>
+            <li>Make it executable with <code className="text-black">chmod +x .git/hooks/commit-msg</code></li>
             <li>Add the following content to the file:</li>
           </ol>
           
           <pre className="bg-muted p-4 rounded-md overflow-x-auto">
-            <code>
+            <code className="text-black">
               #!/bin/sh{"\n"}
               # Run SECOMlint on security-related commits{"\n"}
               if grep -q '^security(' "$1"; then{"\n"}
