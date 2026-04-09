@@ -9,7 +9,7 @@ type NewsItem = {
 const newsItems: NewsItem[] = [
   {
     icon: <FiStar size={20} className="text-primary" />,
-    text: <>SECOM got accepted at <a href="https://2025.msrconf.org/details/msr-2025-technical-papers/47/Towards-Security-Commit-Message-Standardization" target="_blank">MSR'25</a> - Research Track. <a href="/msr25_slides.pdf" target="_blank">Slides</a>, <a href="/MSR_25.pdf" target="_blank">Paper</a></>,
+    text: <>SECOM published at <a href="https://2025.msrconf.org/details/msr-2025-technical-papers/47/Towards-Security-Commit-Message-Standardization" target="_blank">MSR'25</a> - Research Track. <a href="/msr25_slides.pdf" target="_blank">Slides</a>, <a href="/MSR_25.pdf" target="_blank">Paper</a></>,
     date: "May 2025"
   },
   {
