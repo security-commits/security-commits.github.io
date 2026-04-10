@@ -5,7 +5,7 @@ import { useState } from 'react';
 
 const Hero = () => {
   const [showAfterExample, setShowAfterExample] = useState(true);
-  
+
   const beforeExample = `URL sanitize: reject URLs containing bad data
 
 Protocols (IMAP, POP3 and SMTP) that use the path part of a URL in a
@@ -29,13 +29,13 @@ Reported by: Dan Fandrich`;
 
   const afterExample = `vuln-fix: Sanitize URLs to reject malicious data (CVE-2012-0036)
 
-libcurl IMAP/POP3/SMTP parsers accepted URL-path bytes that decode 
-to ASCII control characters, enabling attackers to smuggle extra 
-protocol commands—e.g. pop3://host/1%0D%0ADELE%201—and perform 
-unintended mail operations. Any application that forwards 
-untrusted URLs could thus silently delete or alter messages. 
-The fix routes path decoding through Curl_urldecode(), which 
-aborts when a decoded byte < 0x20 and returns CURLE_URL_MALFORMAT, 
+libcurl IMAP/POP3/SMTP parsers accepted URL-path bytes that decode
+to ASCII control characters, enabling attackers to smuggle extra
+protocol commands—e.g. pop3://host/1%0D%0ADELE%201—and perform
+unintended mail operations. Any application that forwards
+untrusted URLs could thus silently delete or alter messages.
+The fix routes path decoding through Curl_urldecode(), which
+aborts when a decoded byte < 0x20 and returns CURLE_URL_MALFORMAT,
 preventing the crafted request from ever reaching the server.
 
 Weakness: CWE-89
@@ -86,7 +86,7 @@ See also: #17937`;
             </div>
           </div>
         </div>
-        
+
         {/* Code example */}
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl overflow-hidden rounded-xl bg-gray-900 shadow-md">
@@ -98,17 +98,16 @@ See also: #17937`;
                   <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
                 <div className="ml-4 text-gray-200 text-sm">
-                  {showAfterExample ? "SECOM-Compliant" : "Original"} Security Commit Example 
+                  {showAfterExample ? <><strong className="text-blue-400">SECOM-Compliant</strong> Security Commit Example</> : <><strong className="text-amber-400">Original</strong> Security Commit Example</>}
                 </div>
               </div>
-              <Button 
-                variant="ghost" 
-                size="sm" 
-                className="text-gray-200 hover:text-white hover:bg-gray-700"
+              <Button
+                variant="ghost"
+                size="sm"
+                className={`font-medium ${showAfterExample ? 'bg-amber-500/20 text-amber-300 hover:bg-amber-500/30 hover:text-amber-200' : 'bg-blue-500/20 text-blue-300 hover:bg-blue-500/30 hover:text-blue-200'}`}
                 onClick={toggleExample}
               >
-                <FiRefreshCw className="mr-1" size={14} />
-                Show {showAfterExample ? "Original" : "SECOM"}
+                {showAfterExample ? "Original" : "SECOM"}
               </Button>
             </div>
             <pre className="p-4 text-sm text-gray-300 overflow-x-auto bg-gray-900">
@@ -116,8 +115,12 @@ See also: #17937`;
                 {showAfterExample ? afterExample : beforeExample}
               </code>
             </pre>
-            <div className="p-4 text-sm bg-gray-800 border-t border-gray-700 text-white">
-              🍵 {showAfterExample ? afterExplanation : beforeExplanation}
+            <div className="px-4 py-3 text-sm bg-gray-800 border-t border-gray-700 text-gray-400">
+              {showAfterExample ? (
+                <>SECOM-compliant commit message. Uses the <strong className="text-blue-400">vuln-fix:</strong> header, concise <strong className="text-blue-400">What/Why/How</strong> body, and a weakness block with <strong className="text-blue-400">CWE</strong>, <strong className="text-blue-400">severity</strong> and <strong className="text-blue-400">report link</strong>.</>
+              ) : (
+                <>Covers the context succinctly but lacks SECOM framing: <strong className="text-amber-400">no type prefix</strong>, <strong className="text-amber-400">no weakness metadata</strong>, <strong className="text-amber-400">no severity</strong>, and <strong className="text-amber-400">informal attribution</strong>.</>
+              )}
             </div>
           </div>
         </div>

@@ -133,40 +133,6 @@ const Header = () => {
             Convention
           </Link>
           
-          {isHomePage ? (
-            <a 
-              href="#examples" 
-              className="block px-3 py-2 rounded-md text-base font-medium hover:bg-secondary hover:text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Examples
-            </a>
-          ) : (
-            <Link 
-              to="/"
-              className="block px-3 py-2 rounded-md text-base font-medium hover:bg-secondary hover:text-primary"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Examples
-            </Link>
-          )}
-          
-          <Link
-            to="/reference"
-            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-secondary hover:text-primary"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Reference
-          </Link>
-          
-          <Link
-            to="/blog"
-            className="block px-3 py-2 rounded-md text-base font-medium hover:bg-secondary hover:text-primary"
-            onClick={() => setMobileMenuOpen(false)}
-          >
-            Blog
-          </Link>
-          
           <Link
             to="/docs"
             className="block px-3 py-2 rounded-md text-base font-medium hover:bg-secondary hover:text-primary"
@@ -187,7 +153,7 @@ const Header = () => {
           </a>
           
           <a 
-            href="https://github.com/sponsors/TQRG" 
+            href="https://github.com/sponsors/sofiaoreis"
             className="flex items-center gap-2 px-3 py-2 rounded-md text-base font-medium bg-rose-100 text-rose-600 hover:bg-rose-200 hover:text-rose-700"
             target="_blank"
             rel="noopener noreferrer"

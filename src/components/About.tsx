@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "@/components/ui/card";
-import { FiShield, FiSearch, FiList, FiUsers } from 'react-icons/fi';
+import { FiShield, FiSearch, FiList, FiUsers, FiCheckCircle } from 'react-icons/fi';
 
 const AboutFeature = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
   <Card className="border-0 shadow-sm hover:shadow-md transition-shadow">
@@ -24,26 +24,33 @@ const About = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <AboutFeature 
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <AboutFeature
             icon={<FiShield size={28} />}
             title="Improve Security Visibility"
             description="Clearly identify security-related changes in your commit history, making security work visible and traceable."
           />
-          <AboutFeature 
+          <AboutFeature
             icon={<FiSearch size={28} />}
             title="Facilitate Security Audits"
             description="Make security audits more efficient with standardized commit messages that highlight security changes."
           />
-          <AboutFeature 
+          <AboutFeature
             icon={<FiList size={28} />}
             title="Standardize Security Documentation"
             description="Establish a consistent format for documenting security fixes, improvements, and considerations."
           />
-          <AboutFeature 
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto mt-8">
+          <AboutFeature
             icon={<FiUsers size={28} />}
             title="Enhance Team Collaboration"
             description="Help team members understand the security implications of code changes with clear, informative commit messages."
+          />
+          <AboutFeature
+            icon={<FiCheckCircle size={28} />}
+            title="Support Regulatory Compliance"
+            description="Bring transparency to vulnerability handling as required by the EU Cyber Resilience Act (CRA), with structured and traceable security documentation at the commit level."
           />
         </div>
       </div>

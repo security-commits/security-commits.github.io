@@ -17,7 +17,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 md:order-1 md:mt-0">
           <p className="text-center text-xs leading-5 text-gray-500">
-            {new Date().getFullYear()}. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>
+            {new Date().getFullYear()} Security Commits. Licensed under <a href="https://github.com/security-commits/security-commits.github.io/blob/main/LICENSE" className="text-primary hover:underline" target="_blank" rel="noopener noreferrer">MIT</a>
           </p>
         </div>
       </div>
