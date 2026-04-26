@@ -9,6 +9,11 @@ type NewsItem = {
 const newsItems: NewsItem[] = [
   {
     icon: <FiStar size={20} className="text-primary" />,
+    text: <>NER-based work on Interpretable Vulnerability Reports published at <a href="https://claudiarmamede.github.io/publications/ase-25/" target="_blank">ASE'25</a>. <a href="https://claudiarmamede.github.io/assets/pdf/ase25.pdf" target="_blank">Paper</a></>,
+    date: "November 2025"
+  },
+  {
+    icon: <FiStar size={20} className="text-primary" />,
     text: <>SECOM published at <a href="https://2025.msrconf.org/details/msr-2025-technical-papers/47/Towards-Security-Commit-Message-Standardization" target="_blank">MSR'25</a> - Research Track. <a href="/msr25_slides.pdf" target="_blank">Slides</a>, <a href="/MSR_25.pdf" target="_blank">Paper</a></>,
     date: "May 2025"
   },
