@@ -6,7 +6,7 @@ This repo is the home of the [SECOM specification](https://security-commits.org)
 
 ## Overview
 
-Security Commits (SECOM) is a small specification for commit messages that make
+Security Commits is a small specification for commit messages that make
 security-relevant changes visible and machine-readable. It defines how to
 annotate commits that introduce, fix, or otherwise impact security-related
 behaviour in your codebase.
